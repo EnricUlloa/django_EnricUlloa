@@ -1,0 +1,9 @@
+{% include 'head/header.html' %}
+
+<h2>DETALLS DE L'ALUMNE</h2>
+<p>Nom: {{ student.nom }}</p>
+<p>Cognom: {{ student.cognom1 }}</p>
+<p>Segon cognom: {{ student.cognom2 }}</p>
+<p>Curs: {{ student.curs }}</p>
+
+<a href="{% url 'index' %}">Tornar a la pàgina principal</a>
