@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body style="background-color: lightgrey">
+
+    <div id="container">
+        {% block content %}
+            <p id="bienvenida"> Hola a todos!!!</p>
+        {% endblock %}
+    </div>
+
+</body>
+
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f4f7f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    #bienvenida {
+        font-size: 24px;
+        font-weight: bold;
+        color: black;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 4px 4px 10px;
+        margin-bottom: 20px;
+    }
+
+    #container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #container input[type="text"],
+    #container input[type="password"],
+    #container input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    #container button,
+    #container input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #container button:hover,
+    #container input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    #createUser {
+        float: right;
+    }
+</style>
+
+</html>
