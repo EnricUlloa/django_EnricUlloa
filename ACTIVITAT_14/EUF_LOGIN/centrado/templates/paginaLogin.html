@@ -1,0 +1,61 @@
+{%  extends 'index.html' %}
+
+{% block content %}
+
+<body>
+    <div class="container">
+        <h1>¡Bienvenido {{ usuario.nombre }} {{ usuario.apellido }}!</h1>
+        <p>Has iniciado sesión de forma nominal.</p>
+        <p>Prosiga con su navegación habitual.</p>
+
+        <a href="{% url 'cerrar_sesion' %}" class="button">Cerrar Sesión</a>
+    </div>
+</body>
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #E4080A;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #8C1A1B;
+}
+</style>
+
+{% endblock %}
