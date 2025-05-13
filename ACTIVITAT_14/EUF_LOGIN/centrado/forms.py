@@ -1,9 +1,10 @@
 from django import forms
 from .models import Usuario
 from django.contrib.auth.forms import UserCreationForm
-#from
 
-class loginForm(forms.ModelForm):
+
+class LoginForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput)
 
     class Meta:
         model = Usuario

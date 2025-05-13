@@ -10,14 +10,9 @@ def index(request):
 
 def page_home(request):
     usuario_id = request.session.get('usuario_id')
-    if not usuario_id:
+    usuario = Usuario.objects.filter(id=usuario_id).first()
+    if not usuario:
         return redirect('iniciar-sesion')
-
-    try:
-        usuario = Usuario.objects.get(id=usuario_id)
-    except Usuario.DoesNotExist:
-        return redirect('iniciar-sesion')
-
     return render(request, 'paginaLogin.html', {'usuario': usuario})
 
 def login_page(request):
